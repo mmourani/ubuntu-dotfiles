@@ -78,8 +78,8 @@ module.exports = {
     'gulp',
     'npm-check',
     'prettyjson',
-    'trash'
-    //'vtop'
+    'trash',
+    'vtop'
     // ,'yo'
   ]
 };
