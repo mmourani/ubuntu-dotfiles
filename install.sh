@@ -112,7 +112,7 @@ fi
   ok
 
   # set zsh as user login shell 
-  ation "setting zsh as default login shell"
+  action "setting zsh as default login shell"
   sudo chsh -s "$(command -v zsh)" "${USER}"
   ok
 
