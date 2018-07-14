@@ -183,6 +183,10 @@ fi
         nvm use node
     fi
 
+    
+    # always pin versions (no surprises, consistent dev/build machines)
+    npm config set save-exact true
+
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
     ok
