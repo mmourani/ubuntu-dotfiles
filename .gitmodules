@@ -20,3 +20,6 @@
 [submodule "homedir/.vim/autoload"]
 	path = homedir/.vim/
 	url = git@github.com:rakr/vim-togglebg.git
+[submodule "homedir/.vim/homedir/.vim"]
+	path = homedir/.vim/homedir/.vim
+	url = git@github.com:rakr/vim-togglebg.git
