@@ -17,11 +17,12 @@ source ./lib_sh/echos.sh
 
 bot "Hi! I'm going to install tooling and tweak your system settings. Here I go..."
 
+# go into sudo mode...
 # Ask for the administrator password upfront
-bot "I need you to enter your sudo password so I can install some things:"
+action "entering sudo mode..."
 sudo -v
 ok
-bot "entered sudo mode..."
+bot "sudo mode confirmed"
 
 # /etc/hosts
 read -r -p "Overwrite /etc/hosts with the ad-blocking hosts file from someonewhocares.org? (from ./configs/hosts file) [y|N] " response
@@ -85,8 +86,14 @@ fi
 
   ok
   # Make sure we’re upgrading the system 
-  running "upgrading to latest version of ubuntu"
+  action "upgrading to latest version of ubuntu"
   upgrade
+  ok
+
+  ok
+  # Make sure we’re upgrading the system 
+  action "updating ubuntu"
+  update
   ok
 
 read -r -p " continue ? [Y|n] " response
@@ -95,54 +102,3 @@ if [[ $response =~ (no|n|N) ]];then
     bot "exiting script..."
     exit 0
 fi
-
-
-
-# Presentation function and options
-welcome(){
-
-clear
-echo -e "
-${txtblu}
-===================================
-
-        AutoInstall SH
-Created by Maroun Mourani
-
-===================================
-
-${txtrst}Options:
-
-${Red}########## System${txtrst}
- "
-for file in $(ls ./system)
-do
-    if [ $file != import.sh ]
-    then
-        echo $file
-    fi
-
-done;
-
-echo -e "
-
-
-e - Exit
-
-==================================
-
-Enter an option:
-"
-    read program
-
-case $program in
-
-    # Performs the function with the name of the variable passed
-    e) clear; exit;;
-    $program) $program; ready;;
-    *) welcome;;
-
-esac
-}
-
-welcome

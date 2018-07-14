@@ -44,3 +44,9 @@ function upgrade(){
     sudo apt-get --yes update;
     sudo apt-get --yes upgrade;
 }
+
+function update(){
+
+    sudo apt-get --yes autoremove;
+    sudo apt-get --yes update;
+}
