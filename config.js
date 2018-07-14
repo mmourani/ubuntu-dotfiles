@@ -1,5 +1,5 @@
 module.exports = {
-  brew: [
+  ubuntu: [
     // http://conqueringthecommandline.com/book/ack_ag
     'ack',
     'ag',
@@ -42,7 +42,7 @@ module.exports = {
     // Install wget with IRI support
     'wget --enable-iri'
   ],
-  cask: [
+  system: [
     //'adium',
     //'amazon-cloud-drive',
     //'atom',
