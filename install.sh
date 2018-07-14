@@ -194,6 +194,9 @@ fi
     # easier configuration via
     # JSON files and inquirer prompts
     #####################################
+    
+    bot "installing node-gyp in global as it was giving an error..."
+    sudo npm install -g node-gyp
 
     bot "installing npm tools needed to run this project..."
     npm install
@@ -202,9 +205,6 @@ fi
     bot "installing packages from config.js..."
     node index.js
     ok
-
-    bot "installing node-gyp in global as it was giving an error..."
-    sudo npm install -g node-gyp
 
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
