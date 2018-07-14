@@ -199,6 +199,10 @@ fi
     npm install
     ok
 
+    bot "installing packages from config.js..."
+    node index.js
+    ok
+
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
     ok
