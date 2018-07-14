@@ -166,6 +166,12 @@ fi
   action "installing font-awesome-terminal-fonts"
   font-awesome-terminal-fonts
 
+  # installing Hack fonts
+  action "installing Hack fonts"
+  Hack-fonts
+
+  
+
 
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then

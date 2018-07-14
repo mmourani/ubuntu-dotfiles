@@ -71,3 +71,23 @@ function font-awesome-terminal-fonts(){
     echo "All awesome-terminal-fonts fonts installed to $font_dir"
     popd > /dev/null 2>&1
 }
+
+function Hack-fonts(){
+    pushd Hack > /dev/null 2>&1
+    font_dir="$HOME/.local/share/fonts"
+    mkdir -p $font_dir
+    
+    cp -f ./build/ttf/*.ttf $font_dir/
+
+    mkdir -p ~/.config/fontconfig/conf.d
+    cp -f ./config/fontconfig/* ~/.config/fontconfig/conf.d
+
+    # Reset font cache on Linux
+    if command -v fc-cache @>/dev/null ; then
+        echo "Resetting font cache, this may take a moment..."
+        fc-cache -f $font_dir
+    fi
+
+    echo "All Hack fonts installed to $font_dir"
+    popd > /dev/null 2>&1
+}
