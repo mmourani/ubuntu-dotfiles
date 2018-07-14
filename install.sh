@@ -8,6 +8,13 @@
 # include my library helpers for colorized echo and require_brew, etc
 source ./lib_sh/echos.sh
 
+#==================================== Imports ===============================================
+# Import base
+. base/import.sh
+
+# Import Sytem
+. system/import.sh
+
 bot "Hi! I'm going to install tooling and tweak your system settings. Here I go..."
 
 # Ask for the administrator password upfront
@@ -76,6 +83,12 @@ if [[ $? = 0 ]]; then
   fi
 fi
 
+  ok
+  # Make sure we’re upgrading the system 
+  running "upgrading to latest version of ubuntu"
+  upgrade
+  ok
+
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
     ok
@@ -83,13 +96,6 @@ if [[ $response =~ (no|n|N) ]];then
     exit 0
 fi
 
-
-#==================================== Imports ===============================================
-# Import base
-. base/import.sh
-
-# Import Sytem
-. system/import.sh
 
 
 # Presentation function and options

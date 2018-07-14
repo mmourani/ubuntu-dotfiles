@@ -38,3 +38,10 @@ function warn() {
 function error() {
     echo -e "$COL_RED[error]$COL_RESET "$1
 }
+
+function upgrade(){
+    clear;
+    sudo apt-get autoremove;
+    sudo apt-get update;
+    sudo apt-get upgrade;
+}
