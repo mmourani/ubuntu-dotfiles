@@ -111,6 +111,16 @@ fi
   sudo apt-get --yes install ruby-full
   ok
 
+  # set zsh as user login shell 
+  ation "setting zsh as default login shell"
+  sudo chsh -s "$(command -v zsh)" "${USER}"
+  ok
+
+  # copy powerlevel9k theme to oh-my-zsh
+  if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
+  git clone https://github.com/bhilburn/powerlevel9k.git oh-my-zsh/custom/themes/powerlevel9k
+  fi
+
 
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
