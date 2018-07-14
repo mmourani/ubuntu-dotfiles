@@ -91,10 +91,26 @@ fi
   ok
 
   ok
-  # Make sure we’re upgrading the system 
+  # Make sure we’re updating the system 
   action "updating ubuntu"
   update
   ok
+
+  # install fontconfig if not already done
+  action "installing fontconfig"
+  sudo apt-get --yes install fontconfig
+  ok
+
+  # install zsh if not already done
+  action "installing zsh"
+  sudo apt-get --yes install zsh
+  ok
+
+  # install ruby if not already done
+  action "installing ruby"
+  sudo apt-get --yes install ruby-full
+  ok
+
 
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
