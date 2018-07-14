@@ -177,11 +177,8 @@ fi
 
         #install Node version manager 
         curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-        source ~/.nvm/nvm.sh
-        source ~/.bashrc
-        nvm install node
-        nvm use node
-        sudo npm -g install yarn
+        sudo nvm install node
+        sudo nvm use node
     fi
 
     #####################################
