@@ -178,9 +178,8 @@ fi
         #install Node version manager 
         curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
         source ~/.nvm/nvm.sh
-        source ~/.profile
         source ~/.bashrc
-        nvm install node --reinstall-packages-from=node
+        nvm install node
         nvm use node
     fi
 
