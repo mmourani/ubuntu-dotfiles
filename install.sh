@@ -10,7 +10,11 @@ source ./lib_sh/echos.sh
 
 bot "Hi! I'm going to install tooling and tweak your system settings. Here I go..."
 
+# Ask for the administrator password upfront
+bot "I need you to enter your sudo password so I can install some things:"
 sudo -v
+ok
+bot "entered sudo mode..."
 
 # /etc/hosts
 read -r -p "Overwrite /etc/hosts with the ad-blocking hosts file from someonewhocares.org? (from ./configs/hosts file) [y|N] " response
@@ -24,7 +28,7 @@ if [[ $response =~ (yes|y|Y) ]];then
     bot "Your /etc/hosts file has been updated. Last version is saved in /etc/hosts.backup"
 fi
 
-read -r -p " continue ? [y|N] " response
+read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
     ok
     bot "exiting script..."
