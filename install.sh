@@ -194,16 +194,13 @@ fi
     # easier configuration via
     # JSON files and inquirer prompts
     #####################################
-    
-    bot "installing node-gyp in global as it was giving an error..."
-    sudo npm install node-gyp -g
 
     bot "installing npm tools needed to run this project..."
     sudo npm install
     ok
 
-    bot "installing packages from config.js..."
-    sudo node index.js
+    bot "installing npm tools needed to run this project..."
+    sudo npm -g install yarn
     ok
 
 read -r -p " continue ? [Y|n] " response
