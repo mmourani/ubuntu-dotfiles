@@ -180,9 +180,8 @@ fi
         source ~/.nvm/nvm.sh
         source ~/.profile
         source ~/.bashrc
-        nvm install 5.0
-        npm install
-        npm run front
+        nvm install node --reinstall-packages-from=node
+        nvm use node
     fi
 
 read -r -p " continue ? [Y|n] " response
