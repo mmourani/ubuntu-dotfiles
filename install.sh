@@ -150,6 +150,17 @@ fi
       echo -en '\tlinked';ok
     done
 
+
+  popd > /dev/null 2>&1
+
+
+  bot "Installing vim plugins"
+  # cmake is required to compile vim bundle YouCompleteMe
+  vim +PluginInstall +qall > /dev/null 2>&1
+
+  bot "installing fonts"
+  ./fonts/install.sh
+
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
     ok
