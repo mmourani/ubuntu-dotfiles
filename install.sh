@@ -183,9 +183,21 @@ fi
         nvm use node
     fi
 
-    
+
     # always pin versions (no surprises, consistent dev/build machines)
     npm config set save-exact true
+
+
+    #####################################
+    # Now we can switch to node.js mode
+    # for better maintainability and
+    # easier configuration via
+    # JSON files and inquirer prompts
+    #####################################
+
+    bot "installing npm tools needed to run this project..."
+    npm install
+    ok
 
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
