@@ -171,35 +171,6 @@ fi
   action "installing Hack fonts"
   Hack-fonts
 
-
-  #install stable version of node if not alreay in the system
-  #check here for updates on the version https://gist.github.com/d2s/372b5943bce17b964a79
-    if [ ! -d ~/.nvm ]; then
-        #install Node version manager 
-        curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-        source ~/.bashrc
-    fi
-
-    #install working production version of node - 
-    . ~/.nvm/nvm.sh 
-    nvm install v8.11.3 
-    nvm alias default v8.11.3 
-
-    #####################################
-    # Now we can switch to node.js mode
-    # for better maintainability and
-    # easier configuration via
-    # JSON files and inquirer prompts
-    #####################################
-
-    bot "node-gyp was crashing so i had to install the global version"
-    npm install -g node-gyp
-    
-    bot "installing npm tools needed to run this project..."
-    npm install
-    ok
-
-
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
     ok
