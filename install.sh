@@ -181,10 +181,9 @@ fi
     fi
 
     #install working production version of node - 
-    . ~/.nvm/nvm.sh install v8.11.3 
+    . ~/.nvm/nvm.sh 
     nvm install v8.11.3 
     nvm alias default v8.11.3 
-    command -v npm
 
     #####################################
     # Now we can switch to node.js mode
