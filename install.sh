@@ -171,12 +171,19 @@ fi
   action "installing Hack fonts"
   Hack-fonts
 
-  #install Node version manager 
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
-  #install stable version of node 
-  nvm install node
-  nvm use node
+  #install stable version of node if not alreay in the system
+    if [ ! -d ~/.nvm ]; then
+
+        #install Node version manager 
+        curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+        source ~/.nvm/nvm.sh
+        source ~/.profile
+        source ~/.bashrc
+        nvm install 5.0
+        npm install
+        npm run front
+    fi
 
 
 read -r -p " continue ? [Y|n] " response
