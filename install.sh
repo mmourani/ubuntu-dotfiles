@@ -199,11 +199,11 @@ fi
     sudo npm install node-gyp
 
     bot "installing npm tools needed to run this project..."
-    npm install
+    sudo npm install
     ok
 
     bot "installing packages from config.js..."
-    node index.js
+    sudo node index.js
     ok
 
 read -r -p " continue ? [Y|n] " response
