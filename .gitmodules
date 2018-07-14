@@ -17,6 +17,3 @@
 	path = homedir/.vim/bundle/colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
 
-[submodule "homedir/.vim/autoload"]
-	path = homedir/.vim/autoload
-	url = git@github.com:rakr/vim-togglebg.git
