@@ -67,7 +67,7 @@ module.exports = {
     'xquartz'
   ],
   gem: [
-    //'git-up'
+    'git-up'
   ],
   npm: [
     'antic',
@@ -78,8 +78,8 @@ module.exports = {
     'gulp',
     'npm-check',
     'prettyjson',
-    'trash',
-    'vtop'
+    'trash'
+    //'vtop'
     // ,'yo'
   ]
 };
