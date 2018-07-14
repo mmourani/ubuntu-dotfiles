@@ -16,3 +16,6 @@
 [submodule "homedir/.vim/vim-colorschemes"]
 	path = homedir/.vim/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "homedir/.vim/homedir/.vim/vim-colorschemes"]
+	path = homedir/.vim/homedir/.vim/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
