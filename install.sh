@@ -117,6 +117,7 @@ fi
   ok
 
   # copy powerlevel9k theme to oh-my-zsh
+  action "installing powerlevel9K theme to oh-my-zsh"
   if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
   git clone https://github.com/bhilburn/powerlevel9k.git oh-my-zsh/custom/themes/powerlevel9k
   fi
