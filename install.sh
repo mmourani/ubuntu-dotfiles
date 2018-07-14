@@ -180,8 +180,8 @@ fi
     fi
 
     #install node 
-    nvm install v8.11.3
-    nvm alias default v8.11.3
+    nvm install v8.11.3 | bash
+    nvm alias default v8.11.3 | bash
 
     #####################################
     # Now we can switch to node.js mode
