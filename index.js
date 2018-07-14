@@ -42,8 +42,8 @@ inquirer.prompt([{
     })
   }
 
-  installPackages('brew')
-  installPackages('cask')
+  installPackages('ubuntu')
+  installPackages('system')
   installPackages('npm')
   installPackages('gem')
 
