@@ -17,3 +17,9 @@ My first target is to have:
 3 - get vim configuration setup as well 
 
 4 - get z-zsh for easy access to folders 
+
+INSTALLATION
+
+git clone --recurse-submodules https://github.com/mmourani/ubuntu-dotfiles.git  ~/.dotfiles
+cd ~/.dotfiles;
+./install.sh
