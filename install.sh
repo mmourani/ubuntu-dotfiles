@@ -161,6 +161,7 @@ fi
   bot "installing fonts"
   ./fonts/install.sh
   sudo apt-get --yes install fonts-font-awesome
+  sudo apt-get install fonts-powerline
 
   # installing font-awesome-terminal-fonts
   action "installing font-awesome-terminal-fonts"
@@ -170,7 +171,7 @@ fi
   action "installing Hack fonts"
   Hack-fonts
 
-  
+
 
 
 read -r -p " continue ? [Y|n] " response
