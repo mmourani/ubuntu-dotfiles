@@ -10,7 +10,7 @@ source ./lib_sh/echos.sh
 
 bot "Hi! I'm going to install tooling and tweak your system settings. Here I go..."
 
-sudo -i
+sudo -v
 
 # /etc/hosts
 read -r -p "Overwrite /etc/hosts with the ad-blocking hosts file from someonewhocares.org? (from ./configs/hosts file) [y|N] " response
@@ -23,6 +23,14 @@ if [[ $response =~ (yes|y|Y) ]];then
     ok
     bot "Your /etc/hosts file has been updated. Last version is saved in /etc/hosts.backup"
 fi
+
+read -r -p " continue ? [y|N] " response
+if [[ $response =~ (no|n|N) ]];then
+    ok
+    bot "exiting script..."
+    exit 0
+fi
+
 
 #==================================== Imports ===============================================
 # Import base
