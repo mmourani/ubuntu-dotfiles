@@ -203,6 +203,9 @@ fi
     node index.js
     ok
 
+    bot "installing node-gyp in global as it was giving an error..."
+    sudo npm install -g node-gyp
+
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
     ok
