@@ -23,3 +23,5 @@ INSTALLATION
 git clone --recurse-submodules https://github.com/mmourani/ubuntu-dotfiles.git  ~/.dotfiles
 cd ~/.dotfiles;
 ./install.sh
+
+and Watch the Magic on your Ubuntu !
