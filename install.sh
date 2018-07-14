@@ -156,7 +156,7 @@ fi
 
   bot "Installing vim plugins"
   # cmake is required to compile vim bundle YouCompleteMe
-  vim +PluginInstall +qall > /dev/null 2>&1
+  #vim +PluginInstall +qall > /dev/null 2>&1
 
   bot "installing fonts"
   ./fonts/install.sh
