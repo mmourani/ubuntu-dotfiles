@@ -196,7 +196,7 @@ fi
     #####################################
     
     bot "installing node-gyp in global as it was giving an error..."
-    sudo npm install node-gyp
+    sudo npm install node-gyp -g
 
     bot "installing npm tools needed to run this project..."
     sudo npm install
