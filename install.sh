@@ -160,6 +160,11 @@ fi
 
   bot "installing fonts"
   ./fonts/install.sh
+  sudo apt-get --yes install fonts-font-awesome
+
+  # installing font-awesome-terminal-fonts
+  font-awesome-terminal-fonts
+  
 
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then

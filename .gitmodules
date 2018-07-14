@@ -7,3 +7,6 @@
 [submodule "homedir/.vim/bundle/Vundle.vim"]
 	path = homedir/.vim/bundle/Vundle.vim
 	url = git://github.com/VundleVim/Vundle.vim.git
+[submodule "awesome-terminal-fonts"]
+	path = awesome-terminal-fonts
+	url = git@github.com:gabrielelana/awesome-terminal-fonts.git

@@ -50,3 +50,14 @@ function update(){
     sudo apt-get --yes autoremove;
     sudo apt-get --yes update;
 }
+
+function font-awesome-terminal-fonts(){
+    pushd awesome-terminal-fonts > /dev/null 2>&1
+    mkdir -p ~/.fonts
+    cp -f ./build/*.ttf ~/.fonts
+    cp -f ./build/*.sh ~/.fonts
+    mkdir -p ~/.config/fontconfig/conf.d
+    cp -f ./config/* ~/.config/fontconfig/conf.d
+    fc-cache -fv ~/.fonts
+    popd > /dev/null 2>&1
+}
