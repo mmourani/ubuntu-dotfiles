@@ -14,8 +14,6 @@
 	path = Hack
 	url = git@github.com:source-foundry/Hack.git
 [submodule "homedir/.vim/vim-colorschemes"]
-	path = homedir/.vim/vim-colorschemes
+	path = homedir/.vim/bundle/colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
-[submodule "homedir/.vim/homedir/.vim/vim-colorschemes"]
-	path = homedir/.vim/homedir/.vim/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
+
