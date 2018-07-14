@@ -191,10 +191,14 @@ fi
     # easier configuration via
     # JSON files and inquirer prompts
     #####################################
+
+    bot "node-gyp was crashing so i had to install the global version"
+    npm install -g node-gyp
     
     bot "installing npm tools needed to run this project..."
     npm install
     ok
+
 
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
