@@ -181,12 +181,8 @@ fi
         source ~/.bashrc
         nvm install node
         nvm use node
+        sudo npm -g install yarn
     fi
-
-
-    # always pin versions (no surprises, consistent dev/build machines)
-    npm config set save-exact true
-
 
     #####################################
     # Now we can switch to node.js mode
@@ -195,13 +191,6 @@ fi
     # JSON files and inquirer prompts
     #####################################
 
-    bot "installing npm tools needed to run this project..."
-    sudo npm install
-    ok
-
-    bot "installing npm tools needed to run this project..."
-    sudo npm -g install yarn
-    ok
 
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
