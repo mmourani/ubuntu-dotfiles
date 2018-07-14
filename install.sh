@@ -177,9 +177,11 @@ fi
         #install Node version manager 
         curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
         source ~/.bashrc
-        nvm install v8.11.3
-        nvm alias default v8.11.3
     fi
+
+    #install node 
+    nvm install v8.11.3
+    nvm alias default v8.11.3
 
     #####################################
     # Now we can switch to node.js mode
