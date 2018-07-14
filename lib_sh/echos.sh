@@ -40,8 +40,7 @@ function error() {
 }
 
 function upgrade(){
-    clear;
-    sudo apt-get autoremove;
-    sudo apt-get update;
-    sudo apt-get upgrade;
+    sudo apt-get --yes autoremove;
+    sudo apt-get --yes update;
+    sudo apt-get --yes upgrade;
 }
