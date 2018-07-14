@@ -123,6 +123,11 @@ fi
   fi
 
 
+  bot "creating symlinks for project dotfiles..."
+  pushd homedir > /dev/null 2>&1
+  now=$(date +"%Y.%m.%d.%H.%M.%S")
+
+
 read -r -p " continue ? [Y|n] " response
 if [[ $response =~ (no|n|N) ]];then
     ok
