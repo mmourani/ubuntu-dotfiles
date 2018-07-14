@@ -111,6 +111,11 @@ fi
   sudo apt-get --yes install ruby-full
   ok
 
+  # install cmake as it is needed to compile vim
+  action "installing cmake"
+  sudo apt-get --yes install cmake
+  ok
+
   # set zsh as user login shell 
   action "setting zsh as default login shell"
   sudo chsh -s "$(command -v zsh)" "${USER}"
@@ -126,7 +131,7 @@ fi
   bot "creating symlinks for project dotfiles..."
   pushd homedir > /dev/null 2>&1
   now=$(date +"%Y.%m.%d.%H.%M.%S")
-  
+
     for file in .*; do
       if [[ $file == "." || $file == ".." ]]; then
         continue
