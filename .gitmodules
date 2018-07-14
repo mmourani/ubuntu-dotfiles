@@ -10,3 +10,6 @@
 [submodule "awesome-terminal-fonts"]
 	path = awesome-terminal-fonts
 	url = git@github.com:gabrielelana/awesome-terminal-fonts.git
+[submodule "Hack"]
+	path = Hack
+	url = git@github.com:source-foundry/Hack.git
