@@ -10,6 +10,6 @@
 [submodule "Hack"]
 	path = Hack
 	url = git@github.com:source-foundry/Hack.git
-[submodule "homedir/.vim/homedir/.vim/bundle/Vundle.vim"]
-	path = homedir/.vim/homedir/.vim/bundle/Vundle.vim
+[submodule "homedir/.vim/bundle/Vundle.vim"]
+	path = homedir/.vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
