@@ -4,15 +4,9 @@
 [submodule "z-zsh"]
 	path = z-zsh
 	url = git://github.com/sjl/z-zsh.git
-[submodule "homedir/.vim/bundle/Vundle.vim"]
-	path = homedir/.vim/bundle/Vundle.vim
-	url = git://github.com/VundleVim/Vundle.vim.git
 [submodule "awesome-terminal-fonts"]
 	path = awesome-terminal-fonts
 	url = git@github.com:gabrielelana/awesome-terminal-fonts.git
 [submodule "Hack"]
 	path = Hack
 	url = git@github.com:source-foundry/Hack.git
-[submodule "homedir/.vim/vim-colorschemes"]
-	path = homedir/.vim/bundle/colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
