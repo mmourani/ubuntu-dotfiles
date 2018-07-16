@@ -127,6 +127,18 @@ fi
   git clone https://github.com/bhilburn/powerlevel9k.git oh-my-zsh/custom/themes/powerlevel9k
   fi
 
+  # copy zsh-syntax-highlighting plugin to oh-my-zsh
+  action "installing zsh-syntax-highlighting plugin to oh-my-zsh"
+    if [[ ! -d "./oh-my-zsh/plugins/zsh-syntax-highlighting" ]]; then
+  git clone git@github.com:zsh-users/zsh-syntax-highlighting.git oh-my-zsh/plugins/zsh-syntax-highlighting
+  fi
+
+  # copy zsh-autosuggestions plugin to oh-my-zsh
+  action "installing zsh-autosuggestions plugin to oh-my-zsh"
+    if [[ ! -d "./oh-my-zsh/plugins/zsh-autosuggestions" ]]; then
+  git clone git@github.com:zsh-users/zsh-autosuggestions.git oh-my-zsh/plugins/zsh-autosuggestions
+  fi
+
 
   bot "creating symlinks for project dotfiles..."
   pushd homedir > /dev/null 2>&1
