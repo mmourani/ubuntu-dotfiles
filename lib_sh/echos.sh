@@ -49,6 +49,8 @@ function update(){
 
     sudo apt-get --yes autoremove;
     sudo apt-get --yes update;
+    sudo apt-get upgrade ;
+    sudo apt-get dist-upgrade;
 }
 
 function font-awesome-terminal-fonts(){

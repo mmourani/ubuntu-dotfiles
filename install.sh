@@ -85,12 +85,6 @@ if [[ $? = 0 ]]; then
 fi
 
   ok
-  # Make sure we’re upgrading the system 
-  action "upgrading to latest version of ubuntu"
-  upgrade
-  ok
-
-  ok
   # Make sure we’re updating the system 
   action "updating ubuntu"
   update
