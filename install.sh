@@ -116,9 +116,14 @@ fi
   sudo apt-get --yes install cmake
   ok
 
-# install cmake as it is needed to compile vim
+# install thefuck 
   action "installing thefuck"
   sudo apt-get --yes install thefuck
+  ok
+
+# install fortune 
+  action "installing fortune"
+  sudo apt-get --yes install fortune
   ok
 
   # set zsh as user login shell 
