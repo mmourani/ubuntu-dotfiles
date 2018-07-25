@@ -194,3 +194,8 @@ if [[ $response =~ (no|n|N) ]];then
     bot "exiting script..."
     exit 0
 fi
+
+# rebooting the system for updates to take place
+  action "rebooting the system...."
+  sudo reboot
+  ok
