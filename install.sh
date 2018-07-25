@@ -116,6 +116,11 @@ fi
   sudo apt-get --yes install cmake
   ok
 
+# install cmake as it is needed to compile vim
+  action "installing thefuck"
+  sudo apt-get --yes install thefuck
+  ok
+
   # set zsh as user login shell 
   action "setting zsh as default login shell"
   sudo chsh -s "$(command -v zsh)" "${USER}"
