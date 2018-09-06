@@ -110,11 +110,6 @@ fi
   sudo apt-get --yes install cmake
   ok
 
-# install thefuck 
-  action "installing thefuck"
-  sudo apt-get --yes install thefuck
-  ok
-
 # install fortune 
   action "installing fortune"
   sudo apt-get --yes install fortune
@@ -124,6 +119,37 @@ fi
   action "setting zsh as default login shell"
   sudo chsh -s "$(command -v zsh)" "${USER}"
   ok
+
+  # install docker-ce
+  action "removing older version of docker CE"
+  sudo apt-get --yes remove docker docker-engine docker.io
+  action "install docker repository"
+  sudo apt-get --yes update
+  sudo apt-get --yes install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-commons
+  action "Add Docker’s official GPG key"
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo apt-key fingerprint 0EBFCD88
+  action "Use docker stable repo"
+  sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+  action "install docker CE"
+  sudo apt-get --yes update
+  sudo apt-get --yes install docker-ce
+  sudo docker run hello-world
+  ok
+
+  # download and install docker compose
+  action "install docker compose"
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
+  ok
+
 
   # copy powerlevel9k theme to oh-my-zsh
   action "installing powerlevel9K theme to oh-my-zsh"

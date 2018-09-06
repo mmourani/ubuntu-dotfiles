@@ -31,7 +31,7 @@ export DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(colorize compleat dirpersist autojump git gulp history cp)
-plugins=(git nvm npm node docker docker-compose yarn colored-man-pages compleat composer colorize fasd github go golang virtualenv nmap npx react-native history history-substring-search zsh-navigation-tools laravel5 thefuck zsh-autosuggestions z zsh-navigation-tools zsh-syntax-highlighting)
+plugins=(git nvm npm node docker docker-compose yarn colored-man-pages compleat composer colorize fasd github go golang virtualenv nmap npx react-native history history-substring-search zsh-navigation-tools laravel5 zsh-autosuggestions z zsh-navigation-tools zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
