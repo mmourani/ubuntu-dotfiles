@@ -159,24 +159,6 @@ fi
   nvm install 8.9.4
   ok
 
-# install hyperledger
-  action "install hyperledger"
-  curl -O https://hyperledger.github.io/composer/latest/prereqs-ubuntu.sh
-  chmod u+x prereqs-ubuntu.sh
-  ./prereqs-ubuntu.sh
-  npm install -g composer-cli@0.20
-  npm install -g composer-rest-server@0.20
-  npm install -g generator-hyperledger-composer@0.20
-  npm install -g yo
-  npm install -g composer-playground@0.20
-  mkdir ~/fabric-dev-servers && cd ~/fabric-dev-servers
-  curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz
-  tar -xvf fabric-dev-servers.tar.gz
-  cd ~/fabric-dev-servers
-  export FABRIC_VERSION=hlfv12
-  ./downloadFabric.sh
-  ok
-
   # copy powerlevel9k theme to oh-my-zsh
   action "installing powerlevel9K theme to oh-my-zsh"
   if [[ ! -d "./oh-my-zsh/custom/themes/powerlevel9k" ]]; then
@@ -239,4 +221,24 @@ fi
   # installing Hack fonts
   action "installing Hack fonts"
   Hack-fonts
+
+
+# install hyperledger
+  action "install hyperledger"
+  curl -O https://hyperledger.github.io/composer/latest/prereqs-ubuntu.sh
+  chmod u+x prereqs-ubuntu.sh
+  ./prereqs-ubuntu.sh
+  npm install -g composer-cli@0.20
+  npm install -g composer-rest-server@0.20
+  npm install -g generator-hyperledger-composer@0.20
+  npm install -g yo
+  npm install -g composer-playground@0.20
+  mkdir ~/fabric-dev-servers && cd ~/fabric-dev-servers
+  curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz
+  tar -xvf fabric-dev-servers.tar.gz
+  cd ~/fabric-dev-servers
+  export FABRIC_VERSION=hlfv12
+  ./downloadFabric.sh
+  ok
+  
 
