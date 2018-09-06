@@ -150,6 +150,12 @@ fi
   sudo chmod +x /usr/local/bin/docker-compose
   ok
 
+  # install nvm 
+  action "install nvm"
+  sudo apt-get --yes update
+  sudo apt-get --yes install build-essential libss1-dev
+  sudo curl-o-https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+  ok
 
   # copy powerlevel9k theme to oh-my-zsh
   action "installing powerlevel9K theme to oh-my-zsh"
