@@ -214,14 +214,3 @@ fi
   action "installing Hack fonts"
   Hack-fonts
 
-read -r -p " continue ? [Y|n] " response
-if [[ $response =~ (no|n|N) ]];then
-    ok
-    bot "exiting script..."
-    exit 0
-fi
-
-# rebooting the system for updates to take place
-  action "rebooting the system...."
-  sudo reboot
-  ok
