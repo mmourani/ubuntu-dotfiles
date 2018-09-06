@@ -154,7 +154,9 @@ fi
   action "install nvm"
   sudo apt-get --yes update
   sudo apt-get --yes install build-essential libss1-dev
-  sudo curl-o-https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+  curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh -o install_nvm.sh
+  bash install_nvm.sh
+  nvm install 8.9.4
   ok
 
   # copy powerlevel9k theme to oh-my-zsh
