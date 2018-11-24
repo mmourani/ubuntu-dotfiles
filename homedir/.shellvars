@@ -27,3 +27,13 @@ export MYDEVAPPS=/Applications/Dev
 #########################################################################
 export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 export NVM_DIR=~/.nvm
+
+#########################################################################
+# Hyperledger settings 
+#########################################################################
+export LFID=mmourani
+export REPO=fabric-ca
+
+export PROJECT=github.com/hyperledger
+export GERRIT=gerrit.hyperledger.org
+export GERRIT_ADDR=$GERRIT:29418
